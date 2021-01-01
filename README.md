@@ -1,6 +1,6 @@
-# Calamity
+# Calamity RPG
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+This is an experiment to see how easily I can build out an entire 8-bit RPG with Angular.
 
 ## Development server
 
