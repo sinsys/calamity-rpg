@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import './styles/main';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(180deg, #666666, #343646, #191a20, #131313);
+	background-size: 100% 400%;
+	animation: gradient 10s ease-in-out infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 0% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
