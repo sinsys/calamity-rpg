@@ -1,0 +1,40 @@
+:host {
+  display: block;
+
+  #statPanel {
+    display: inline-block;
+
+    .stats {
+      padding: 1rem;
+      background: #333;
+      color: #FEFEFE;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: space-between;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+
+    .stat {
+      display: inline-block;
+      padding: 0.125rem;
+      text-align: left;
+      width: 50%;
+      color: #DDD;
+    }
+
+    .stat-value {
+      display: inline-block;
+      padding: 0.125rem;
+      text-align: right;
+      font-weight: bold;
+      width: 50%;
+      color: #EEE;
+    }
+  }
+}
