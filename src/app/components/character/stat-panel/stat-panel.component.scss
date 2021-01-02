@@ -1,18 +1,44 @@
 :host {
   display: block;
+  width: 100%;
 
   #statPanel {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
     .stats {
       padding: 1rem;
-      background: #333;
       color: #FEFEFE;
-      border-radius: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: space-between;
+      border-radius: 0.5rem;
+      margin: 1rem;
+      width: 150px;
+      box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+      border: 0.25rem solid #22AFCA;
+
+      .stats-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .stat {
+        display: inline-block;
+        padding: 0.125rem;
+        text-align: center;
+        color: #DDD;
+        width: 75px;
+      }
+  
+      .stat-value {
+        display: inline-block;
+        padding: 0.125rem;
+        text-align: center;
+        font-weight: bold;
+        color: #EEE;
+        width: 75px;
+      }
     }
 
     h2 {
@@ -20,21 +46,6 @@
       text-align: center;
     }
 
-    .stat {
-      display: inline-block;
-      padding: 0.125rem;
-      text-align: left;
-      width: 50%;
-      color: #DDD;
-    }
 
-    .stat-value {
-      display: inline-block;
-      padding: 0.125rem;
-      text-align: right;
-      font-weight: bold;
-      width: 50%;
-      color: #EEE;
-    }
   }
 }
