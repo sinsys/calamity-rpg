@@ -1,10 +1,7 @@
+@import 'src/styles/main';
+
 :host {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include scene;
 
   .title {
     text-align: center;
