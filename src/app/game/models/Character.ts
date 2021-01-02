@@ -2,17 +2,20 @@ import { EquipType, StatType, StatModifier } from 'src/app/game/models/Base';
 import { Equipment } from 'src/app/game/models/Equipment';
 
 export default class Character {
+  name: string;
   stats: CharacterStats;
   equipment: CharacterEquipment;
   lvl: number;
   experience: number;
 
   constructor (
+    name,
     stats,
     equipment,
     lvl,
     experience
   ) {
+    this.name = name;
     this.stats = stats;
     this.equipment = equipment;
     this.lvl = lvl;
@@ -23,11 +26,11 @@ export default class Character {
     this.equipment[type] = equipment;
   }
 
-  increaseStat (statistic: StatType, modifier: StatModifier): void {
+  increaseStat (statistic: StatType): void {
     this.stats[statistic] += 1;
   }
 
-  readStats (): CharacterStats {
+  getStats (): CharacterStats {
     const stats = { ...this.stats };
     const equipment = Object.keys(this.equipment).filter(equipment => this.equipment[equipment] != null);
     equipment.forEach(piece => {

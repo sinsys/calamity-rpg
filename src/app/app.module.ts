@@ -7,6 +7,7 @@ import { GameEngine } from './game/game.engine';
 import { LaunchComponent } from './scenes/launch/launch.component';
 import { BackgroundComponent } from './components/layout/background/background.component';
 import { PlaygroundComponent } from './scenes/playground/playground.component';
+import { StatPanelComponent } from './components/character/stat-panel/stat-panel.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PlaygroundComponent } from './scenes/playground/playground.component';
     GameEngine,
     LaunchComponent,
     BackgroundComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
+    StatPanelComponent
   ],
   imports: [
     BrowserModule,
