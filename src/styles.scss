@@ -1,8 +1,18 @@
 
 @import './styles/main';
 
+html, body {
+  position: relative;
+  background: #000;
+  z-index: -2;
+}
 * {
   box-sizing: border-box;
   @include fira-font;
 }
 
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
