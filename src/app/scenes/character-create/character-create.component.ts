@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-character-create',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character-create.component.scss']
 })
 export class CharacterCreateComponent implements OnInit {
+  name = new FormControl('');
 
   constructor() { }
 
