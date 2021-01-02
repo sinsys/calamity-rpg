@@ -1,6 +1,60 @@
 
 import { EquipType, ModifierType, StatType } from './Base'
-
+const leatherHelment = {
+  name: 'Leather Helmet',
+  type: EquipType.HEAD,
+  modifiers: [
+    {
+      statType: StatType.DEX,
+      modifierType: ModifierType.COUNT,
+      value: 1
+    }
+  ] 
+};
+const leatherVest = {
+  name: 'Leather Vest',
+  type: EquipType.CHEST,
+  modifiers: [
+    {
+      statType: StatType.DEX,
+      modifierType: ModifierType.COUNT,
+      value: 1
+    }
+  ] 
+};
+const leatherPants = {
+  name: 'Leather Pants',
+  type: EquipType.LEGS,
+  modifiers: [
+    {
+      statType: StatType.DEX,
+      modifierType: ModifierType.COUNT,
+      value: 1
+    }
+  ] 
+}
+const leatherBracers = {
+  name: 'Leather Bracers',
+  type: EquipType.ARMS,
+  modifiers: [
+    {
+      statType: StatType.DEX,
+      modifierType: ModifierType.COUNT,
+      value: 1
+    }
+  ] 
+}
+const rustySword = {
+  name: 'Rusty Sword',
+  type: EquipType.WEAPON,
+  modifiers: [
+    {
+      statType: StatType.STR,
+      modifierType: ModifierType.COUNT,
+      value: 10
+    }
+  ]
+}
 export default {
   stats: {
     hp: 100,
@@ -12,69 +66,14 @@ export default {
     spd: 10
   },
   equipment: {
-    head: {
-      name: 'Leather Helmet',
-      type: EquipType.HEAD,
-      modifiers: [
-        {
-          attr: StatType.DEX,
-          type: ModifierType.COUNT,
-          value: 1
-        }
-      ] 
-    },
-    chest: {
-      name: 'Leather Vest',
-      type: EquipType.CHEST,
-      modifiers: [
-        {
-          attr: StatType.DEX,
-          type: ModifierType.COUNT,
-          value: 1
-        }
-      ] 
-    },
-    legs: {
-      name: 'Leather Pants',
-      type: EquipType.LEGS,
-      modifiers: [
-        {
-          attr: StatType.DEX,
-          type: ModifierType.COUNT,
-          value: 1
-        }
-      ] 
-    },
-    arms: {
-      name: 'Leather Braces',
-      type: EquipType.ARMS,
-      modifiers: [
-        {
-          attr: StatType.DEX,
-          type: ModifierType.COUNT,
-          value: 1
-        }
-      ] 
-    },
-    relics: {
-      one: null,
-      two: null
-    },
-    weapons: {
-      left: {
-        name: 'Rusty Sword',
-        type: EquipType.WEAPON,
-        modifiers: [
-          {
-            attr: StatType.STR,
-            type: ModifierType.COUNT,
-            value: 10
-          }
-        ]
-      },
-      right: null,
-      both: null
-    }
+    head: leatherHelment,
+    chest: leatherVest,
+    legs: leatherPants,
+    arms: leatherBracers,
+    relicLeft: null,
+    relicRight: null,
+    weaponLeft: rustySword,
+    weaponRight: null
   },
   lvl: 1,
   experience: 1

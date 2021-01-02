@@ -27,25 +27,39 @@ export default class Character {
     this.stats[statistic] += 1;
   }
 
-  readStats () {
+  readStats (): CharacterStats {
     const stats = { ...this.stats };
-    for (let equip in this.equipment) {
-      this.equipment[equip].modifiers.forEach(modifier => {
-        stats[modifier.]
-      })
-    }
-    return compiledStats;
+    const equipment = Object.keys(this.equipment).filter(equipment => this.equipment[equipment] != null);
+    equipment.forEach(piece => {
+      this.equipment[piece].modifiers.forEach(modifier => {
+        switch (modifier.modifierType) {
+          case 'count': stats[modifier.statType] += modifier.value;
+            break;
+          case 'perc': stats[modifier.statType] *= modifier.value;
+            break;
+        }
+      });
+    });
+    return stats;
+  }
+
+  readBaseStats (): CharacterStats {
+    return this.stats;
+  }
+
+  readEquipment () {
+    return this.equipment;
   }
 }
 
 export enum Stat {
-  HP = 'HP',
-  STR = 'STR',
-  DEX = 'DEX',
-  INT = 'INT',
-  LUCK = 'LUCK',
-  MGK = 'MGK',
-  SPD = 'SPD'
+  HP = 'hp',
+  STR = 'str',
+  DEX = 'dex',
+  INT = 'int',
+  LUCK = 'luck',
+  MGK = 'mgk',
+  SPD = 'spd'
 }
 
 export interface CharacterStats {
@@ -63,12 +77,8 @@ export interface CharacterEquipment {
   chest?: Equipment;
   legs?: Equipment;
   arms?: Equipment;
-  relics: {
-    one?: Equipment;
-    two?: Equipment;
-  }
-  weapons: {
-    one?: Equipment;
-    two?: Equipment;
-  }
+  relicLeft?: Equipment;
+  reliceRight?: Equipment;
+  weaponLeft?: Equipment;
+  weaponRight?: Equipment;
 }

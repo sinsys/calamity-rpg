@@ -1,17 +1,17 @@
 export interface StatModifier {
-  attr: StatType;
-  type: ModifierType;
+  statType: StatType;
+  modifierType: ModifierType;
   value: number;
 }
 
 export enum StatType {
-  HP = 'HP',
-  STR = 'STR',
-  DEX = 'DEX',
-  INT = 'INT',
-  LUCK = 'LUCK',
-  MGK = 'MGK',
-  SPD = 'SPD'
+  HP = 'hp',
+  STR = 'str',
+  DEX = 'dex',
+  INT = 'int',
+  LUCK = 'luck',
+  MGK = 'mgk',
+  SPD = 'spd'
 }
 
 export enum ModifierType {
@@ -20,10 +20,10 @@ export enum ModifierType {
 }
 
 export enum EquipType {
-  HEAD = 'Head',
-  CHEST = 'Chest',
-  LEGS = 'Legs',
-  ARMS = 'Arms',
-  RELIC = 'Relic',
-  WEAPON = 'Weapon'
+  HEAD = 'head',
+  CHEST = 'chest',
+  LEGS = 'legs',
+  ARMS = 'arms',
+  RELIC = 'relic',
+  WEAPON = 'weapon'
 }

@@ -15,6 +15,10 @@ export class PlaygroundComponent implements OnInit {
 
   ngOnInit(): void {
     this.character = this.createNewPlayer();
+    const stats = this.character.readStats();
+    const equipment = this.character.readEquipment();
+    console.log('STATS:', stats)
+    console.log('EQUIPMENT:', equipment)
   }
 
   createNewPlayer (): Character {
