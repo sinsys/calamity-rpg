@@ -9,15 +9,15 @@ import {
 
 export const fadeAnimation = trigger('fadeAnimation', [
   transition('* => *', [    
-    query(':enter, :leave', style({ position: 'fixed', height:'100%' })),
+    query(':enter, :leave', style({ position: 'fixed', height:'100%', opacity: 1 })),
     group([ 
       query(':enter', [
-        style({ transform: 'translateY(100%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateY(0%)' }))
+        style({ opacity: 0, transform: 'translateY(20%)' }),
+        animate('0.5s 0.5s ease-in-out', style({ opacity: 1, transform: 'translateY(0%)' }))
       ]),
       query(':leave', [
-        style({ transform: 'translateY(0%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateY(-100%)' }))]),
+        style({ opacity: 1, transform: 'translateY(0%)' }),
+        animate('0.5s ease-in-out', style({ opacity: 0, transform: 'translateY(-20%)' }))]),
     ])
   ])
 ]);
