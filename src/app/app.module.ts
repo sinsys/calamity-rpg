@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GameEngine } from './game/game.engine';
 import { LaunchComponent } from './scenes/launch/launch.component';
 import { BackgroundComponent } from './components/layout/background/background.component';
+import { PlaygroundComponent } from './scenes/playground/playground.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { BackgroundComponent } from './components/layout/background/background.c
     GameEngine,
     LaunchComponent,
     BackgroundComponent,
-
+    PlaygroundComponent
   ],
   imports: [
     BrowserModule,
