@@ -5,14 +5,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { GameEngine } from './game/game.engine';
 
-import { LaunchComponent } from './scenes/launch/launch.component';
-import { PlaygroundComponent } from './scenes/playground/playground.component';
+import { LaunchComponent } from './views/launch/launch.component';
+import { CharacterCreateComponent } from './views/character-create/character-create.component';
 
 import { BackgroundComponent } from './components/layout/background/background.component';
 import { StatPanelComponent } from './components/character/stat-panel/stat-panel.component';
-import { CharacterCreateComponent } from './scenes/character-create/character-create.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,6 @@ import { CharacterCreateComponent } from './scenes/character-create/character-cr
     GameEngine,
     LaunchComponent,
     BackgroundComponent,
-    PlaygroundComponent,
     StatPanelComponent,
     CharacterCreateComponent
   ],
