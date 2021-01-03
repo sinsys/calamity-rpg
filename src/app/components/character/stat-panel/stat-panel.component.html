@@ -1,13 +1,14 @@
 <div id="statPanel">
   <div class="stats">
     <div *ngFor="let stat of stats | keyvalue">
-      <p>
+      <div class="stats-wrapper">
         <span class="stat">
           {{stat.key | titlecase}}:
         </span>
         <span class="stat-value">
           {{stat.value}}
-        </span></p>
+        </span>
+      </div>
     </div>
   </div>
 </div>
