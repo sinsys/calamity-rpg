@@ -5,9 +5,9 @@ import { CharacterCreateComponent } from './views/character-create/character-cre
 import { GameEngine } from './game/game.engine';
 
 const routes: Routes = [
-  { path: '', component: LaunchComponent },
-  { path: 'create', component: CharacterCreateComponent },
-  { path: 'game', component: GameEngine }
+  { path: '', component: LaunchComponent, data: { animation: 'Launch' } },
+  { path: 'create', component: CharacterCreateComponent, data: { animation: 'Create' } },
+  { path: 'game', component: GameEngine, data: { animation: 'Game' } }
 ];
 
 @NgModule({
