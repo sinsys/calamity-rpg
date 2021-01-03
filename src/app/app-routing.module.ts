@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LaunchComponent } from './scenes/launch/launch.component';
-import { CharacterCreateComponent } from './scenes/character-create/character-create.component';
-import { PlaygroundComponent } from './scenes/playground/playground.component';
+import { LaunchComponent } from './views/launch/launch.component';
+import { CharacterCreateComponent } from './views/character-create/character-create.component';
+import { GameEngine } from './game/game.engine';
 
 const routes: Routes = [
   { path: '', component: LaunchComponent },
   { path: 'create', component: CharacterCreateComponent },
-  { path: 'playground', component: PlaygroundComponent }
+  { path: 'game', component: GameEngine }
 ];
 
 @NgModule({
