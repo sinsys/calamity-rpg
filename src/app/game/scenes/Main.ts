@@ -98,6 +98,5 @@ export class MainScene extends Phaser.Scene {
     if (pointer.isDown && player.body.touching.down) {
       player.setVelocityY(-550);
     }    
-
   }
 }
