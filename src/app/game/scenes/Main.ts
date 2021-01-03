@@ -86,10 +86,10 @@ export class MainScene extends Phaser.Scene {
     // Mouse
     const pointer = this.input.activePointer;
     if (pointer.isDown) {
-      if (pointer.worldX < (this.cameras.main.centerX / 2)) {
+      if (pointer.worldX < player.x) {
         player.setVelocityX(-260);
         player.anims.play('left', true);
-      } else {
+      } else if (pointer.worldX >= player.x) {
         player.setVelocityX(260);
         player.anims.play('right', true);
       }
