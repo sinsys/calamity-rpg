@@ -69,10 +69,10 @@ export class MainScene extends Phaser.Scene {
     const cursors = this.cursors;
     const player = this.player;
     if (cursors.left.isDown) {
-      player.setVelocityX(-160);
+      player.setVelocityX(-260);
       player.anims.play('left', true);
     } else if (cursors.right.isDown) {
-      player.setVelocityX(160);
+      player.setVelocityX(260);
       player.anims.play('right', true);
     } else {
       player.setVelocityX(0);
@@ -82,5 +82,22 @@ export class MainScene extends Phaser.Scene {
     if (cursors.up.isDown && player.body.touching.down) {
       player.setVelocityY(-550);
     }
+
+    // Mouse
+    const pointer = this.input.activePointer;
+    if (pointer.isDown) {
+      if (pointer.worldX < (this.cameras.main.centerX / 2)) {
+        player.setVelocityX(-260);
+        player.anims.play('left', true);
+      } else {
+        player.setVelocityX(260);
+        player.anims.play('right', true);
+      }
+    }
+
+    if (pointer.isDown && player.body.touching.down) {
+      player.setVelocityY(-550);
+    }    
+
   }
 }
